@@ -860,7 +860,7 @@
 - name: "SCORED | 1.6.1 | PATCH | Ensure XD/NX support is enabled"
   shell: |
       set -o pipefail;
-      dmesg | grep -E "NX|XD" | grep " active"
+      journalctl | grep 'protection: active'
   args:
       executable: /bin/bash
   changed_when: false
