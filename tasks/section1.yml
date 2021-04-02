@@ -685,6 +685,8 @@
 
 - name: "SCORED | 1.4.1 | PATCH | Init AIDE | This may take a LONG time"
   command: /usr/sbin/aideinit
+  async: 3600
+  poll: 30
   args:
       creates: /var/lib/aide/aide.db
   when:
@@ -858,7 +860,7 @@
 - name: "SCORED | 1.6.1 | PATCH | Ensure XD/NX support is enabled"
   shell: |
       set -o pipefail;
-      dmesg | grep -E "NX|XD" | grep " active"
+      journalctl | grep 'protection: active'
   args:
       executable: /bin/bash
   changed_when: false
