@@ -586,9 +586,7 @@
   block:
 
       - name: "SCORED | 5.3.2 | PATCH | Reset user account tally for good measure"
-        lineinfile:
-            dest: /etc/pam.d/common-account
-            line: 'account required pam_tally2.so'
+        ansible.builtin.shell: /sbin/pam_tally2 -u {{ ansible_user|quote }} --reset
 
       - name: "SCORED | 5.3.2 | PATCH | Fix for Bug in pam_tally2.so"
         lineinfile:

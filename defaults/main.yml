@@ -459,7 +459,7 @@ ubuntu1804cis_vartmp:
   enabled: false
 
 # Apply upgrades (set to false if another patching system is in place)
-ubuntu1804cis_apply_upgrades: true
+ubuntu1804cis_apply_upgrades: false
 
 ###### Multi OS Vars ###########
 prelim_check_package_command:
