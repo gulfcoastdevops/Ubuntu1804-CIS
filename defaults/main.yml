@@ -120,7 +120,7 @@ ubuntu1804cis_rule_2_3_5: true
 
 # Section 3 rules
 ubuntu1804cis_rule_3_1_1: true
-ubuntu1804cis_rule_3_1_2: true
+ubuntu1804cis_rule_3_1_2: false
 ubuntu1804cis_rule_3_2_1: true
 ubuntu1804cis_rule_3_2_2: true
 ubuntu1804cis_rule_3_2_3: true
